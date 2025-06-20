@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker.io/toni1997/my-react-app:latest
+          image: docker.io/toni1997/my-react-app:1660ba5f28fa409896efd18092a63ad6cba42b74
           imagePullPolicy: Always
           ports:
             - containerPort: 80
