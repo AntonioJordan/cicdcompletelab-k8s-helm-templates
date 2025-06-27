@@ -1,3 +1,8 @@
+#Testeamos
+#   Que el service existe
+#   Puerto expuesto
+#   Respuesta HTTP
+#   Service mesh correcto entre pods
 apiVersion: v1
 kind: Pod
 metadata:
