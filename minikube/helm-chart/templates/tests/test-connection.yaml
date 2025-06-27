@@ -1,4 +1,3 @@
-# templates/tests/test-service.yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -9,5 +8,9 @@ spec:
   containers:
   - name: curl
     image: curlimages/curl
-    command: ["curl", "--fail", "http://{{ include \"mi-chart.fullname\" . }}-svc:{{ .Values.service.port }}"]
+    command:
+      - sh
+      - -c
+      - >
+        curl --fail http://{{ include "mi-chart.fullname" . }}-svc:{{ .Values.service.port }}
   restartPolicy: Never
