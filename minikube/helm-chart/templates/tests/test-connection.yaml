@@ -1,15 +1,13 @@
+# templates/tests/test-service.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "mi-chart.fullname" . }}-test-connection"
-  labels:
-    {{- include "mi-chart.labels" . | nindent 4 }}
+  name: "{{ .Release.Name }}-test"
   annotations:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['{{ include "mi-chart.fullname" . }}:{{ .Values.service.port }}']
+  - name: curl
+    image: curlimages/curl
+    command: ["curl", "--fail", "http://{{ include \"mi-chart.fullname\" . }}-svc:{{ .Values.service.port }}"]
   restartPolicy: Never
