@@ -28,3 +28,12 @@ spec:
             limits:
               cpu: {{ .Values.resources.limits.cpu }}
               memory: {{ .Values.resources.limits.memory }}
+        #Para prometheus + Loki + OpenTelemetry
+        - name: nginx-exporter
+          image: nginx/nginx-prometheus-exporter
+          ports:
+            - containerPort: 9113
+        - name: promtail
+          image: grafana/promtail:latest
+        - name: otel-collector
+          image: otel/opentelemetry-collector:latest
