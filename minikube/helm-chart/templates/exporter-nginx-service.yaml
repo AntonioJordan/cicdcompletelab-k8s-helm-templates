@@ -7,7 +7,7 @@ metadata:
     app: nginx-exporter
 spec:
   selector:
-    app: frontend-app
+    app: mi-chart
   ports:
     - protocol: TCP
       port: 9113
