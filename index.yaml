@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  mi-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-07-11T00:12:45.540735096+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 4b79b86d89c6d1372e76c65b774a394897051853148ada76b35a03c5bf745aa6
+    icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+    name: mi-chart
+    type: application
+    urls:
+    - https://antoniojordan.github.io/cicdcompletelab-openshift/mi-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-07-11T00:12:45.538526535+02:00"
